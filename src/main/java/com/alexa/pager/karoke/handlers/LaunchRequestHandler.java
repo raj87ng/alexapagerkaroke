@@ -2,6 +2,7 @@ package com.alexa.pager.karoke.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
+import com.amazon.ask.model.IntentRequest;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
 
@@ -15,6 +16,11 @@ public class LaunchRequestHandler implements RequestHandler {
     }
 
     public Optional<Response> handle(HandlerInput input) {
+		/*
+		 * IntentRequest req = (IntentRequest) input.getRequestEnvelope().getRequest();
+		 * req.getIntent().getConfirmationStatusAsString();
+		 * req.getIntent().getSlots().get("");
+		 */
         String speechText = "Welcome to the Pager Karaoke Device skill! You can say, show me pager, show me karaoke, or show me device information!";
         return input.getResponseBuilder()
                 .withSpeech(speechText)

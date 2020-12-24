@@ -9,7 +9,11 @@ import com.alexa.pager.karoke.handlers.KaraokeIntentHandler;
 import com.alexa.pager.karoke.handlers.LaunchRequestHandler;
 import com.alexa.pager.karoke.handlers.MyExceptionHandler;
 import com.alexa.pager.karoke.handlers.PagerIntentHandler;
+import com.alexa.pager.karoke.handlers.RestaurantImagesEventHandler;
+import com.alexa.pager.karoke.handlers.RestaurantImagesIntentHandler;
 import com.alexa.pager.karoke.handlers.SessionEndedRequestHandler;
+import com.alexa.pager.karoke.handlers.ShoppingStoresIntentHandler;
+import com.alexa.pager.karoke.handlers.StoreIntentHandler;
 import com.alexa.pager.karoke.request.LocalizationRequestInterceptor;
 import com.alexa.pager.karoke.request.LogRequestInterceptor;
 import com.alexa.pager.karoke.response.LogResponseInterceptor;
@@ -33,6 +37,10 @@ public class AlexaServlet extends SkillServlet {
                 		new DeviceIntentHandler(),
                         new KaraokeIntentHandler(),
                         new PagerIntentHandler(),
+                        new RestaurantImagesIntentHandler(),
+                        new RestaurantImagesEventHandler(),
+                        new StoreIntentHandler(),
+                        new ShoppingStoresIntentHandler(),
                         new CancelAndStopIntentHandler(),
                         new LaunchRequestHandler(),
                         new HelpIntentHandler(),
